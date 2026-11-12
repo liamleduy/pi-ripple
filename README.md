@@ -1,6 +1,6 @@
 # pi-ripple
 
-**Cross-repo features for [pi](https://github.com/badlogic/pi-mono): one agent per repo, coordinated through a shared prompt queue.**
+**Cross-repo features for [pi](https://github.com/earendil-works/pi): one agent per repo, coordinated through a shared prompt queue.**
 
 When a single agent is handed a change that spans several repos, it tends to fail in one of two ways: it reads everything and exhausts its context, or it focuses on the first repo and does a worse job on the rest. pi-ripple avoids both. Each repo gets its own pi runtime that owns only that repo, and the agents (and you) talk through a queue.
 
@@ -36,11 +36,11 @@ The queue is plain FIFO today. The broker is the single place where queue policy
 ## Install
 
 ```bash
-pi install git:github.com/lalalkila/pi-ripple
+pi install git:github.com/liamleduy/pi-ripple
 ```
 
 Requirements:
-- [pi](https://github.com/badlogic/pi-mono) 1.5 or newer
+- [pi](https://github.com/earendil-works/pi) 1.5 or newer
 - [cmux](https://github.com/manaflow-ai/cmux): run pi inside it (`cmux pi`). cmux is the only supported multiplexer for now.
 - Node 22.6+ (the broker runs TypeScript directly; developed on Node 24)
 

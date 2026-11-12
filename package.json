@@ -1,0 +1,14 @@
+{
+  "name": "pi-ripple",
+  "version": "0.1.0",
+  "description": "Cross-repo features for pi: one agent per repo, coordinated through a shared prompt queue",
+  "keywords": ["pi-package"],
+  "license": "MIT",
+  "type": "module",
+  "scripts": { "test": "node --test test/broker.test.ts" },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-ai": "*"
+  },
+  "pi": { "extensions": ["./extensions/ripple/index.ts"] }
+}
